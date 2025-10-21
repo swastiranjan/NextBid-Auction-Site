@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}SAUCTION | Item Details{% endblock %}
+
+{% block content %}
+<br/>
+<h3>Item Details</h3>
+<p>
+    <h5>Item Name : </h5>{{val.itemname}}
+</p>
+<p>
+   <h5>Item Description : </h5>{{val.data}}
+</p>
+<p>
+    <h5>Base Price : </h5>{{val.bprice}}
+</p>
+<p>
+    <h5>Date Created : </h5>{{val.date}}
+</p>
+<p>
+<h5>Highest Bidder : </h5>{{ name }}
+</p>
+<p>
+<h5>Highest Bid : </h5>{{ amount }}
+</p>
+
+{% endblock%}

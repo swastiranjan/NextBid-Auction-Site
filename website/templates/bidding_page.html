@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}SAUCTION | Bidding Page{% endblock %}
+
+{% block content %}
+<br/>
+<h3>Bidding Page</h3>
+<p>
+    <h5>Item Name : </h5>{{val.itemname}}
+</p>
+<p>
+   <h5>Item Description : </h5>{{val.data}}
+</p>
+<p>
+    <h5>Base Price : </h5>{{val.bprice}}
+</p>
+<p>
+    <h5>Listing created by : </h5>{{creator.first_name}} {{creator.last_name}}
+</p>
+<p>
+    <h5>Highest Bid so far : </h5>{{highest}}
+</p>
+<br/>
+
+<form method="POST">
+    <div class="form-group">
+        <label for="bidAmount"><h5>Enter amount you wish to bid :</h5></label>
+        <input type="text" class="form-control" id="bidAmount" name="bidAmount" placeholder="Enter amount "/>
+    </div>
+    <button type="submit" class="btn btn-primary">Bid</button>
+</form>
+
+{% endblock%}

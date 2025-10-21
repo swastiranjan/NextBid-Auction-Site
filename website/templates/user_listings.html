@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}SAUCTION | User Listings{% endblock %}
+
+{% block content %} 
+<br/>
+<h2 align="center">Your Listings</h2>
+<br/>
+<ul class="list-group list-group-flush" id="listings">
+    {% for item in user.listings %}
+    <li class="list-group-item">
+        {{ item.itemname }}
+        <br/>
+
+        <a href="/item-desc/{{ item.id }}">
+        <button type="button" class="btn btn-primary">
+            Click to view details!
+        </button>
+        </a>
+
+        <button type="button" class="close" onClick="deleteNote({{ item.id }})">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </li>
+    {% endfor %}
+</ul>
+
+
+{% endblock%}

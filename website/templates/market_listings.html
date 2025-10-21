@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}SAUCTION | Market Listings{% endblock %}
+
+{% block content %} 
+<br/>
+<h2 align="center">Market Listings</h2>
+<br/>
+<ul class="list-group list-group-flush" id="marketlistings">
+    {% for item in val %}
+    <li class="list-group-item">
+        {{ item.itemname }}
+        <br/>
+        {% if item.user_id == user.id %}
+        <h6>This is your market listing!</h6>
+        {% else %}
+        <a href="/bidding-page/{{ item.id }}">
+            <button class="btn btn-primary">
+                Click to bid!
+            </button>
+        </a>
+        {% endif %}
+        
+    </li>
+    {% endfor %}
+</ul>
+
+{% endblock%}
