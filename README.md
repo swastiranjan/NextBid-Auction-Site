@@ -5,34 +5,6 @@ Frontend: HTML, CSS, JavaScript
 Backend: Python, Flask
 Database: SQLite
 
-Installation
-Clone the repository:
-
-bash
-git clone https://github.com/yourusername/nextbid.git
-cd nextbid
-Set up a Python virtual environment:
-
-bash
-python -m venv venv
-source venv/bin/activate   # On Windows use: venv\Scripts\activate
-Install dependencies:
-
-bash
-pip install -r requirements.txt
-Run the application:
-
-bash
-flask run
-Access the site at http://localhost:5000.
-
-Usage
-Create an account to start bidding or list your own items.
-
-Browse current auctions or use the search feature to find specific items.
-
-Place a bid before the countdown ends; highest bid wins!
-
 Folder Structure
 website/ – HTML, CSS, JS files
 
